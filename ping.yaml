@@ -1,0 +1,8 @@
+-
+  name: Test ping functionality using ansible
+  hosts: web_nodes
+  tasks:
+    -
+      name: Execute ping test using ansible for localhost
+      ping:
+      tags: done

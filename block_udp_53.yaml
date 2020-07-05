@@ -1,0 +1,9 @@
+-
+  name: Block udp connection to a specified port
+  hosts: web_nodes
+  tasks:
+    - name: Deny access to udp port 53
+      ufw:
+          rule: deny
+          port: '53'
+          proto: udp

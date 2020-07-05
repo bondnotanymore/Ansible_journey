@@ -1,0 +1,9 @@
+-
+  name: Allow udp connection to a specified port
+  hosts: web_nodes
+  tasks:
+    - name: Allow access to udp port 80
+      ufw:
+          rule: allow
+          port: '80'
+          proto: udp

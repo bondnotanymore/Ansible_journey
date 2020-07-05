@@ -1,0 +1,14 @@
+-
+  name: Allow tcp connection to a specified port
+  hosts: web_nodes
+  tasks:
+    - name: Allow access to tcp port 80
+      ufw:
+          rule: allow
+          port: '80'
+          proto: tcp
+
+    - name: Restart the ufw service
+      service:
+          name: ufw
+          state: restarted

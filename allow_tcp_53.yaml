@@ -1,0 +1,9 @@
+-
+  name: Allow tcp connection to a specified port
+  hosts: web_nodes
+  tasks:
+    - name: Allow access to tcp port 53
+      ufw:
+          rule: allow
+          port: '53'
+          proto: tcp

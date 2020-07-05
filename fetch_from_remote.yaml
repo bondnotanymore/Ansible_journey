@@ -1,0 +1,9 @@
+-
+  name: Fetch a file from remote to local host
+  hosts: web1
+  tasks:
+    -
+      name: Fetch a file from a remote machine to local host using ansible
+      fetch:
+          src: /root/xml-rpc-server.py
+          dest: ~/My_ansible_journey/

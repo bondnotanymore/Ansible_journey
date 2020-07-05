@@ -1,0 +1,25 @@
+-
+  name: Test ping functionality using ansible
+  hosts: web_nodes
+  tasks:
+    -
+      name: Execute ping test using ansible for localhost
+      ping:
+      tags: done
+    -
+      name: "Ensure that ansible is installed on the remote hosts"
+      apt:
+        name: ansible
+        state: latest
+    -
+      name: "Ensure that docker is installed on the remote hosts"
+      apt:
+        name: docker
+        state: latest
+-
+  name: Hooray we finished installing apache using ansible_host
+  hosts: localhost
+  tasks:
+    -
+      name: Let the cow do the talking
+      command: 'echo "Let the cow do the talking " | cowsay'

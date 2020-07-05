@@ -1,0 +1,13 @@
+-
+  name: Copy a file from local to remote host
+  hosts: web1
+  tasks:
+    -
+      name: Copy a file from my local computer to any remote host using ansible
+      copy:
+          src: ~/My_ansible_journey/ping_with_ansible/inventory.txt
+          dest: /root/using_ansible/
+          owner: root
+          group: root
+          mode: '0644'
+      tags: done
