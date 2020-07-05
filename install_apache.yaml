@@ -27,8 +27,3 @@
       service:
         name: apache2
         state: restarted
-    -
-      name: Uninstall the apache on the remote host
-      apt:
-        name: apache2
-        state: absent
